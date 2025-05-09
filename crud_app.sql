@@ -62,6 +62,21 @@ ALTER TABLE `users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
+CREATE TABLE products (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    type VARCHAR(50) NOT NULL,
+    price DECIMAL(10,2) NOT NULL,
+    stock INT NOT NULL,
+    image_url VARCHAR(255)
+);
+
+INSERT INTO products (name, type, price, stock, image_url) VALUES
+('Camisa blanca', 'camisa', 30.00, 10, 'img/camisa1.jpg'),
+('Camisa sin stock', 'camisa', 35.00, 0, 'img/camisa2.jpg'),
+('Pantalón corto azul', 'corto', 25.00, 5, 'img/corto1.jpg'),
+('Pantalón de invierno negro', 'invierno', 40.00, 3, 'img/invierno1.jpg');
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
